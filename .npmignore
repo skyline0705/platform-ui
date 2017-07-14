@@ -1,0 +1,9 @@
+.*
+*.md
+*.html
+build/
+node_modules/
+test/
+config/
+dist/
+static/
