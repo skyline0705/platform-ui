@@ -36,10 +36,6 @@ export default {
             type: Boolean,
             default: false
         },
-        isOld: {
-            type: Boolean,
-            default: false
-        },
         filterNodeMethod: {
             type: Function
         }
@@ -193,7 +189,6 @@ export default {
             :show-checkbox="showCheckbox"
             @fold="fold"
             @checked-change="changeCheckedStatus"
-            :is-old="isOld"
             @row-click="rowClick"
             v-show="nodeMap[item.id].show"
         ></pl-tree-item>

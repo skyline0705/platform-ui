@@ -101,7 +101,4 @@ textarea
         border-color brand-primary
     &-large
         height 150px
-textarea[is-old]
-    &:focus
-        border-color old-brand-primary
 </style>

@@ -28,10 +28,6 @@ export default {
         event: 'change'
     },
     props: {
-        isOld: {
-            type: Boolean,
-            default: false
-        },
         name: {
             type: String,
             default: ''
@@ -168,14 +164,12 @@ export default {
 <template>
 <div
     class="pl-date-picker"
-    :is-old="isOld"
     :open="isOpen"
     :style="{
         width: width
     }"
 >
     <pl-date-input
-        :is-old="isOld"
         :width="width"
         :height="height"
         :name="name"
@@ -198,7 +192,6 @@ export default {
             }"
         >
             <pl-month-view
-                :is-old="isOld"
                 :current-year="currentYear"
                 :current-month="currentMonth"
                 :real-range-begin="realRangeBegin"
@@ -206,7 +199,6 @@ export default {
                 @change="changeDayList"
             ></pl-month-view>
             <pl-day-view
-                :is-old="isOld"
                 :day-title="dayTitle"
                 :current-date="value"
                 :current-month="currentMonth"

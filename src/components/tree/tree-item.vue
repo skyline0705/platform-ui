@@ -10,10 +10,6 @@ import plCheckbox from '../checkbox';
 export default {
     name: 'pl-tree-item',
     props: {
-        isOld: {
-            type: Boolean,
-            default: false
-        },
         nodeMap: {
             type: Object,
             required: true
@@ -82,7 +78,7 @@ export default {
 
 <template>
 
-<li :is-old="isOld">
+<li>
     <div
         class="tree-item"
         @click="fold(item, $event.target, true)"
@@ -130,7 +126,6 @@ export default {
                 @checked-change="changeCheckStatus"
                 :level="level + 1"
                 :show-checkbox="showCheckbox"
-                :is-old="isOld"
                 v-show="nodeMap[item.id].show"
             ></pl-tree-item>
         </ul>
@@ -182,19 +177,4 @@ input
         border-color transparent
     &.open
         transform rotate(-45deg)
-
-[is-old] .tree-item&:hover
-    background old-brand-primary
-    .expand
-        border-color transparent transparent transparent #fff
-[is-old] .expand
-    margin-top 0
-    border 5px solid
-    width 0
-    height 0
-    border-color transparent transparent transparent lighten(font-color-primary, 20%)
-    transform-origin 2px 5px
-    transform rotate(0)
-    &.open
-        transform rotate(90deg)
 </style>

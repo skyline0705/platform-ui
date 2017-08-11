@@ -9,10 +9,6 @@
 import plInput from '../input';
 export default {
     props: {
-        isOld: {
-            type: Boolean,
-            default: false
-        },
         width: {
             type: String
         },
@@ -42,10 +38,9 @@ export default {
 
 <template>
 
-<span :open="isOpen" :is-old="isOld">
+<span :open="isOpen">
     <i @click="showLayer()"></i>
     <pl-input
-        :is-old="isOld"
         type="text"
         class="pl-date-picker-input"
         readonly
@@ -89,13 +84,4 @@ i
             border-color brand-primary
     i
         background-position 0 -19px
-
-[is-old]
-    i
-        background-image url('./calendar-old.png')
-    &[open]
-        .pl-date-picker-input
-            border-color old-brand-primary
-        i
-            background-position 0 -18px
 </style>

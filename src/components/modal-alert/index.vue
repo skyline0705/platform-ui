@@ -14,10 +14,6 @@ export default {
         width: {
             type: String,
             default: '370px'
-        },
-        isOld: {
-            type: Boolean,
-            default: false
         }
     },
     data() {
@@ -52,7 +48,6 @@ export default {
 <template>
 <div>
     <modal
-        :is-old="isOld"
         :width="width"
         ref="modal"
         @before-show="trigger('before-show')"
@@ -67,7 +62,7 @@ export default {
             <slot>{{msg}}</slot>
         </div>
         <div class="modal-alert-action">
-            <pl-button :is-old="isOld" type="primary" @click="confirm">确定</pl-button>
+            <pl-button type="primary" @click="confirm">确定</pl-button>
         </div>
     </modal>
 </div>
@@ -78,6 +73,4 @@ export default {
     &-action
         margin-top 20px
         text-align center
-[is-old] .modal-alert-action
-    text-align right
 </style>

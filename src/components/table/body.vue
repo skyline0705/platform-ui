@@ -48,7 +48,7 @@ export default {
         }
         if (!this.data.length && this.type === 'real') {
             return (
-                <table is-old={this.$parent.isOld}>
+                <table>
                     <tbody>
                         <tr>
                             <td colspan={this.realColumns.length}>
@@ -66,7 +66,7 @@ export default {
             return <col width={column.width} />;
         });
         return (
-            <table is-old={this.$parent.isOld}>
+            <table>
                 <colgroup>
                     {colList}
                 </colgroup>
@@ -93,13 +93,6 @@ export default {
 @import '../common/variables.styl'
 td
     color #fff
-[is-old] td
-    color #666
-[is-old] td
-    font-size 14px
-    border-top none
-    height 34px
-td
     box-sizing border-box
     border-top 1px solid #e0e0e0
     font-size 12px

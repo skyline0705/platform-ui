@@ -19,9 +19,6 @@ export default {
         }
     },
     computed: {
-        isOld() {
-            return this.$parent.isOld;
-        },
         isActive() {
             /* eslint-disable no-underscore-dangle */
             return this.$parent.nowActive === this._uid;
@@ -59,7 +56,6 @@ export default {
         <slot></slot>
     </div>
     <li
-        :is-old="isOld"
         ref="tab"
         :class="{
             active: isActive,
@@ -92,24 +88,5 @@ li
         color brand-primary
     &.disabled
         color font-color-secondary
-        cursor not-allowed
-li[is-old]
-    box-sizing border-box
-    margin-bottom -1px
-    margin-right 2px
-    border-radius 5px 5px 0 0
-    border 1px solid #e6e6e6
-    background #F5F5F5
-    color #939393
-    cursor pointer
-    &:hover
-        background #fcfcfc
-    &.active
-        background #fff
-        border-bottom-color #fff
-        color #4D4D4D
-    &.disabled
-        color lighten(font-color-secondary, 50%)
-        background #F5F5F5
         cursor not-allowed
 </style>

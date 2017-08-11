@@ -279,26 +279,4 @@ ul
             &:hover
                 background brand-primary
                 color bg-color
-
-
-.select[is-old]
-    .select-now
-        color font-color-primary
-        background #fafbfc
-        border-radius 0
-        i
-            margin-top -2px
-            border 5px solid
-            width 0
-            height 0
-            border-color #cfd8ee transparent transparent
-            transform rotate(0);
-        &.selected i
-            margin-top -8px
-            border-color transparent transparent old-brand-primary transparent
-    .select-list
-        li
-            &.selected,
-            &:hover
-                background old-brand-primary
 </style>

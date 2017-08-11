@@ -59,11 +59,4 @@ input
     &[disabled]
         cursor not-allowed
         background input-disabled-bg-color
-
-
-input[is-old]
-    background #fafbfc
-    color font-color-primary
-    &:focus
-        border-color old-brand-primary
 </style>

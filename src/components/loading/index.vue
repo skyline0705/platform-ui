@@ -7,13 +7,8 @@
  * Jul 7, 2016
  */
 
-// TODO等开源时候特么重新设计一下，忒特么的丑！！！！！！
 export default {
     props: {
-        isOld: {
-            type: Boolean,
-            default: false
-        },
         show: {
             type: Boolean,
             default: false
@@ -41,7 +36,7 @@ export default {
 
 <template>
 
-<div class="loading" :is-old="isOld" v-show="show">
+<div class="loading" v-show="show">
     <div class="loading-content">
         <slot>加载中，请稍候...</slot>
     </div>
@@ -96,7 +91,4 @@ export default {
         &:after
             left 28px
             animation loading-after .89s infinite ease-in-out both
-[is-old] .loading-content:before,
-[is-old] .loading-content:after
-    background old-brand-primary
 </style>

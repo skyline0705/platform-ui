@@ -40,9 +40,7 @@ export default {
             >
                 {this.columns.map(column => {
                     return (
-                        <td
-                            is-old={this.$parent.isOld}
-                        >{column.renderCell({row: this.row.item})}</td>
+                        <td>{column.renderCell({row: this.row.item})}</td>
                     );
                 })}
             </tr>
@@ -58,14 +56,6 @@ tr.row-hovered
     background brand-primary
     td
         color #fff
-[is-old] tr.row-hovered
-    background #e0f1ff
-    td
-        color #666
-[is-old] td
-    font-size 14px
-    border-top none
-    height 34px
 td
     box-sizing border-box
     border-top 1px solid #e0e0e0

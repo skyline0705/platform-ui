@@ -13,10 +13,6 @@ import plSelect from '../select';
 
 export default {
     props: {
-        isOld: {
-            type: Boolean,
-            default: false
-        },
         currentYear: {
             required: true,
             type: Number
@@ -135,7 +131,6 @@ export default {
         v-else
     ></span>
     <pl-select
-        :is-old="isOld"
         class="options-year"
         :value="currentYear"
         @change="changeYear"
@@ -145,7 +140,6 @@ export default {
         max-height="145px"
     ></pl-select>
     <pl-select
-        :is-old="isOld"
         class="options-month"
         :value="currentMonth"
         @change="changeMonth"
@@ -211,10 +205,4 @@ export default {
                 transform rotate(135deg)
         &-disabled
             visibility hidden
-
-[is-old] .options-arrow
-    border-color #cfd8ee
-    background #cfd8ee
-    &:before
-        border-color #fff
 </style>

@@ -13,10 +13,6 @@ const DEFAULT_COLUMN_WIDTH = 80;
 export default {
     name: 'pl-table',
     props: {
-        isOld: {
-            type: Boolean,
-            default: false
-        },
         height: {
             type: Number
         },
@@ -215,7 +211,6 @@ export default {
     :class="{
         'can-not-select': resizeLine.show
     }"
-    :is-old="isOld"
     v-resize="updateLayout"
 >
     <div class="hidden-columns"><slot></slot></div>
@@ -334,11 +329,6 @@ export default {
         margin-top -1px
         overflow auto
         width 100%
-    &[is-old] &-fixed-body
-        top 33px
-    &[is-old] &-fixed-head,
-    &[is-old] &-head
-        border-bottom none
 .hidden-columns
     display none
 .resize-line

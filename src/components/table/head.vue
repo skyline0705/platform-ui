@@ -98,7 +98,6 @@ export default {
         const thList = this[`${this.type}Columns`].map((column, index) => {
             return (
                 <th
-                    is-old={this.$parent.isOld}
                     on-mousemove={event => this.mouseMove(event, column)}
                     on-mousedown={event => this.mouseDown(event, column)}
                 >
@@ -140,8 +139,4 @@ th
     white-space nowrap
     text-align left
     text-overflow ellipsis
-    &[is-old]
-        height 34px
-        font-weight bold
-        font-size 14px
 </style>

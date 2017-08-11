@@ -137,31 +137,4 @@ ul
     &:hover span
         color #ccc
         background #fff
-
-old-day-view-cell-color = #666
-old-day-view-cell-disabled-color = #d3d3d3
-
-[is-old]
-    ul,
-    .cell
-        border-color day-view-border-color
-        span
-            color old-day-view-cell-color
-        &-date:hover span
-            color #fff
-            background old-brand-primary
-    .selected span
-        background old-brand-primary
-        color #fff
-        transform scale(1)
-    .disabled:hover span
-        color old-day-view-cell-disabled-color
-        background #fff
-    .title .cell
-        border-color day-view-border-color
-    .day-list li:nth-child(-n + 7)
-        border-top-color day-view-border-color
-    .not-in-month span,
-    .disabled span
-        color old-day-view-cell-disabled-color
 </style>

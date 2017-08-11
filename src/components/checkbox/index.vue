@@ -13,10 +13,6 @@ export default {
         event: 'change'
     },
     props: {
-        isOld: {
-            type: Boolean,
-            default: false
-        },
         value: {},
         name: {},
         // TODO回头考虑一下checked组件是否需要init校验

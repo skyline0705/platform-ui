@@ -150,30 +150,6 @@ header
     position relative
     padding 20px
 
-
-// 以下部分为老模块中的modal风格
-old-modal-header-border-color = #e5e5e5
-
-[is-old] header
-    border-bottom 1px solid old-modal-header-border-color
-[is-old] .close
-    margin-top 10px
-    padding 4px 0
-    width 28px
-    text-align center
-    float right
-    cursor pointer
-    color #b3b3b3
-    text-decoration none
-    background none
-    font-size 20px
-    height 20px
-    line-height 21px
-    text-indent 0
-    &:hover
-        background-color #e6e6e6
-        color #ccc
-
 .modal-enter-active,
 .modal-leave-active
     transition all .3s ease-out

@@ -8,16 +8,9 @@
 
 import plNumberInput from '../number-input';
 
-// TODO老版本永远下线之后这个就可以移除了
-import plSelect from '../select';
-
 export default {
     name: 'plPagination',
     props: {
-        isOld: {
-            type: Boolean,
-            default: false
-        },
         currentPage: {
             type: Number,
             required: true
@@ -110,17 +103,16 @@ export default {
         }
     },
     components: {
-        plSelect,
         plNumberInput
     }
 };
 </script>
 
 <template>
-<div class="pl-pagination" :is-old="isOld">
+<div class="pl-pagination">
     <div class="pl-pagination-size" v-if="layout.pageSize">
         <span>显示条数</span>
-        <ul v-if="!isOld">
+        <ul>
             <li
                 v-for="size in pageSizeList"
                 class="list-item"
@@ -130,16 +122,6 @@ export default {
                 {{size}}
             </li>
         </ul>
-        <!-- TODO 老系统UI风格下线之后这货直接可以干掉了 -->
-        <template v-else>
-            <pl-select
-                is-old
-                :value="pageSize"
-                :options="pageSizeList.map(val => ({value: val, text: val}))"
-                @change="changePageSize"
-                style="margin-left: 15px;"
-            ></pl-select>
-        </template>
     </div>
     <div :class="{right: layout.pageSize}">
         <!-- TODO其实下面这货的结构是不符合语义化的，后续再改 -->
@@ -150,16 +132,14 @@ export default {
                 class="prev list-item"
                 @click="jumpTo(currentPage - 1)"
             >
-                <i v-if="!isOld"></i>
-                <template v-else>上一页</template>
+                <i></i>
             </li>
             <li
                 v-else
                 href="javascript:void(0);"
                 class="prev disabled list-item"
             >
-                <i v-if="!isOld"></i>
-                <template v-else>上一页</template>
+                <i></i>
             </li>
             <template v-if="totalPage <= 6">
                 <template v-for="i in totalPage">
@@ -245,22 +225,19 @@ export default {
                 class="next list-item"
                 @click="jumpTo(currentPage + 1)"
             >
-                <i v-if="!isOld"></i>
-                <template v-else>下一页</template>
+                <i></i>
             </li>
             <li
                 v-else
                 href="javascript:void(0);"
                 class="disabled next list-item"
             >
-                <i v-if="!isOld"></i>
-                <template v-else>下一页</template>
+                <i></i>
             </li>
         </ul>
         <span v-if="layout.jumper" class="jumper">
             前往
             <pl-number-input
-                :is-old="isOld"
                 v-model="goPage"
                 style="width: 35px;height: 28px;text-align: center;"
                 @keyup.native.enter="quickJumpTo"
@@ -363,28 +340,4 @@ export default {
 .jumper
     display inline-block
     vertical-align top
-
-[is-old]
-    .pl-pagination-size
-        font-size font-size-base
-        color font-color-primary
-    .list-item
-        padding 0 10px
-        min-width 8px
-        font-size font-size-base
-        border-right solid 1px #e6e6e6
-        margin-right 2px
-        border-radius 3px
-        &:last-child
-            margin-right 0
-        &:hover,
-        &.selected
-            background #3C3D42
-        &.disabled,
-        &.disabled:hover
-            color #ccc
-            background #f2f2f2
-        &.ellipsis
-            background #fff
-            border-color transparent
 </style>

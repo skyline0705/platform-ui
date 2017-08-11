@@ -37,10 +37,6 @@ export default {
         event: 'change'
     },
     props: {
-        isOld: {
-            type: Boolean,
-            default: false
-        },
         name: {},
         signal: {
             type: String,
@@ -332,7 +328,6 @@ export default {
     }"
 >
     <pl-date-input
-        :is-old="isOld"
         :width="width"
         :height="height"
         :name="name"
@@ -389,7 +384,6 @@ export default {
                         }"
                     >
                         <pl-month-view
-                            :is-old="isOld"
                             :current-year="currentBeginYear"
                             :current-month="currentBeginMonth"
                             :real-range-begin="realRangeBegin"
@@ -398,7 +392,6 @@ export default {
                         ></pl-month-view>
                         <pl-day-view
                             class="day-view"
-                            :is-old="isOld"
                             :day-title="dayTitle"
                             :current-date="innerValue.begin || new Date('100', '0', '1')"
                             :current-month="currentBeginMonth"
@@ -422,7 +415,6 @@ export default {
                     </p>
                     <div class="date-picker-view" :class="{'date-infinity': innerValue.end === null}">
                         <pl-month-view
-                            :is-old="isOld"
                             :current-year="currentEndYear"
                             :current-month="currentEndMonth"
                             :real-range-begin="realRangeBegin"
@@ -431,7 +423,6 @@ export default {
                         ></pl-month-view>
                         <pl-day-view
                             class="day-view"
-                            :is-old="isOld"
                             :day-title="dayTitle"
                             :current-date="innerValue.end || new Date('9999', '11', '31')"
                             :current-month="currentEndMonth"
@@ -444,8 +435,8 @@ export default {
                 </div>
             </div>
             <p class="pl-date-range-actions">
-                <pl-button :is-old="isOld" type="primary" size="small" @click="confirm">确定</pl-button>
-                <pl-button :is-old="isOld" size="small" @click="reset">取消</pl-button>
+                <pl-button type="primary" size="small" @click="confirm">确定</pl-button>
+                <pl-button size="small" @click="reset">取消</pl-button>
             </p>
         </div>
     </transition>

@@ -8,12 +8,6 @@
 
 export default {
     name: 'pl-tabs',
-    props: {
-        isOld: {
-            type: Boolean,
-            default: false
-        }
-    },
     data() {
         return {
             nowActive: null,
@@ -70,7 +64,7 @@ export default {
 };
 </script>
 <template>
-<div :is-old="isOld">
+<div>
     <div class="tabs-header">
         <ul ref="tabs" class="tabs"></ul>
         <div
@@ -104,8 +98,5 @@ export default {
     left 0
     transition transform .3s ease-in-out
 .empty
-    display none
-
-[is-old] .slide
     display none
 </style>

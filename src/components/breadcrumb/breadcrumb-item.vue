@@ -101,9 +101,6 @@ export default {
                 result += `#${hash}`;
             }
             return result;
-        },
-        isOld() {
-            return this.$parent.isOld;
         }
     }
 };
@@ -111,7 +108,7 @@ export default {
 
 <template>
 
-<li class="breadcrumb-item" :is-old="isOld">
+<li class="breadcrumb-item">
     <span class="link" @click="link"><slot></slot></span><span class="separator">{{separator}}</span>
 </li>
 
@@ -138,10 +135,4 @@ li:last-child
     margin 0 5px
     color lighten(font-color-secondary, 50%)
     cursor default
-
-[is-old]
-    .link:hover
-        color old-brand-primary
-    li:last-child .link
-        color old-brand-primary
 </style>
