@@ -24,7 +24,6 @@ export default {
 <template>
 
 <div>
-    <h1>DSP内部使用风格</h1>
     <div>
         <pl-date-range-picker
             v-model="date"
@@ -41,10 +40,6 @@ export default {
                 end: true
             }"
         ></pl-date-range-picker>
-    </div>
-    <h1>admin/adpos内部使用风格</h1>
-    <div>
-        <pl-date-range-picker is-old v-model="date"></pl-date-range-picker>
     </div>
 </div>
 

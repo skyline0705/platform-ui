@@ -31,7 +31,6 @@ export default {
 <template>
 
 <div>
-    <h1>DSP内部使用风格</h1>
     <div>
         <pl-button type="primary" @click="showModal('modal-confirm')">modal-confirm</pl-button>
         <pl-modal-confirm ref="modal-confirm">
@@ -54,34 +53,6 @@ export default {
         >
             <template slot="title">
                 你好
-            </template>
-            啦啦啦啦啦啦啦啦
-        </pl-modal-confirm>
-    </div>
-    <h1>admin/adpos内部使用风格</h1>
-    <div>
-        <pl-button is-old type="primary" @click="showModal('old-modal-confirm')">modal-confirm</pl-button>
-        <pl-modal-confirm is-old ref="old-modal-confirm">
-            <template slot="title">
-                我是老的
-            </template>
-            啦啦啦啦啦啦啦啦
-        </pl-modal-confirm>
-    </div>
-    <h2>自定义宽度</h2>
-    <div>
-        <pl-button is-old type="primary" @click="showModal('old-modal-confirm-width')">modal-confirm</pl-button>
-        <pl-modal-confirm
-            is-old
-            ref="old-modal-confirm-width"
-            width="600px"
-            @before-show="alert('显示之前')"
-            @after-show="alert('显示之后')"
-            @before-hide="alert('隐藏之前')"
-            @after-hide="alert('隐藏之后')"
-        >
-            <template slot="title">
-                我是老的
             </template>
             啦啦啦啦啦啦啦啦
         </pl-modal-confirm>

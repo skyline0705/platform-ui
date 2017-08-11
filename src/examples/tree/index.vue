@@ -63,7 +63,6 @@ export default {
 <template>
 
 <div>
-    <h1>DSP内部使用风格</h1>
     <pl-input v-model="filterWord"></pl-input>
     <div>
         <pl-tree
@@ -79,11 +78,6 @@ export default {
             show-checkbox
         ></pl-tree>
         <pl-button type="primary" @click="showCheckedList('new')">查看选中项</pl-button>
-    </div>
-    <h1>admin/adpos内部使用风格</h1>
-    <div>
-        <pl-tree ref="old":data="data" is-old></pl-tree>
-        <pl-button @click="showCheckedList('old')">查看选中项</pl-button>
     </div>
 </div>
 

@@ -39,28 +39,12 @@ export default {
 <template>
 
 <div>
-    <h1>DSP内部使用风格</h1>
     <div>
         <pl-pagination
             :current-page="currentPage"
             :totalPage="totalPage"
             :layout="layout"
             :pageSize="pageSize"
-            :size="size"
-            @current-change="changeCurrent"
-            @page-size-change="changePageSize"
-        ></pl-pagination>
-        <p>{{currentPage}}</p>
-        <p>{{pageSize}}</p>
-    </div>
-    <h1>admin/adpos内部使用风格</h1>
-    <div>
-        <pl-pagination
-            is-old
-            :current-page="currentPage"
-            :total-page="totalPage"
-            :layout="layout"
-            :page-size="pageSize"
             :size="size"
             @current-change="changeCurrent"
             @page-size-change="changePageSize"

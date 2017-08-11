@@ -2,7 +2,6 @@
 
 | 属性           | 描述                    | 可选值                                      | 默认值      | 是否必填 |
 | ------------ | --------------------- | ---------------------------------------- | -------- | ---- |
-| is-old       | 是否为老UI（adpos/admin）风格 | `true` `false`                           | `false`  | 否    |
 | type         | 按钮类型                  | `primary` `secondary` `success` `info` `warning` `danger` | 无        | 否    |
 | size         | 按钮大小                  | `large` `medium` `small`                 | `medium` | 否    |
 | nativeButton | 按钮类型                  | `button` `submit`                        | `button` | 否    |

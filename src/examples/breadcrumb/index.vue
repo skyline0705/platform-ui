@@ -20,17 +20,8 @@ export default {
 <template>
 
 <div>
-    <h1>DSP内部使用风格</h1>
     <div>
         <pl-breadcrumb>
-            <pl-breadcrumb-item to="/">111</pl-breadcrumb-item>
-            <pl-breadcrumb-item>222</pl-breadcrumb-item>
-            <pl-breadcrumb-item>333</pl-breadcrumb-item>
-        </pl-breadcrumb>
-    </div>
-    <h1>admin/adpos内部使用风格</h1>
-    <div>
-        <pl-breadcrumb is-old>
             <pl-breadcrumb-item
                 :to="{
                     path: '/?a=3',

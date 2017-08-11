@@ -22,10 +22,6 @@ export default {
     <div>
         <pl-loading :show="true"></pl-loading>
     </div>
-    <h1>admin/adpos内部使用风格</h1>
-    <div>
-        <pl-loading is-old :show="true"></pl-loading>
-    </div>
 </div>
 
 </template>

@@ -21,18 +21,10 @@ export default {
 <template>
 
 <div>
-    <h1>DSP内部使用风格</h1>
     <div>
         <pl-checkbox v-model="value" :value="1">我是checkbox：1</pl-checkbox>
         <pl-checkbox disabled v-model="value" :value="3">我是checkbox：3</pl-checkbox>
         <pl-checkbox v-model="value" :value="3">我是checkbox：3</pl-checkbox>
-        <p>{{value}}</p>
-    </div>
-    <h1>admin/adpos内部使用风格</h1>
-    <div>
-        <pl-checkbox is-old v-model="value" :value="1">我是checkbox：1</pl-checkbox>
-        <pl-checkbox is-old v-model="value" :value="3">我是checkbox：3</pl-checkbox>
-        <pl-checkbox is-old v-model="value" :value="3">我是checkbox：3</pl-checkbox>
         <p>{{value}}</p>
     </div>
 </div>

@@ -23,7 +23,6 @@ export default {
 <template>
 
 <div>
-    <h1>DSP内部使用风格</h1>
     <h2>
         large：
     </h2>
@@ -59,43 +58,6 @@ export default {
         <pl-button type="warning" size="small" @click="alert('warning')">warning</pl-button>
         <pl-button type="danger" size="small" @click="alert('danger')">danger</pl-button>
         <pl-button disabled size="small">disabled</pl-button>
-    </p>
-    <h1>admin/adpos内部使用风格</h1>
-    <h2>
-        large：
-    </h2>
-    <p>
-        <pl-button type="primary" is-old size="large" @click="alert('old-primary')">primary</pl-button>
-        <pl-button type="secondary" is-old size="large" @click="alert('old-secondary')">secondary</pl-button>
-        <pl-button type="success" is-old size="large" @click="alert('old-success')">success</pl-button>
-        <pl-button type="info" is-old size="large" @click="alert('old-info')">info</pl-button>
-        <pl-button type="warning" is-old size="large" @click="alert('old-warning')">warning</pl-button>
-        <pl-button type="danger" is-old size="large" @click="alert('old-danger')">danger</pl-button>
-        <pl-button disabled is-old size="large" @click="alert('old-disabled')">disabled</pl-button>
-    </p>
-    <h2>
-        medium：
-    </h2>
-    <p>
-        <pl-button type="primary" is-old @click="alert('old-primary')">primary</pl-button>
-        <pl-button type="secondary" is-old @click="alert('old-secondary')">secondary</pl-button>
-        <pl-button type="success" is-old @click="alert('old-success')">success</pl-button>
-        <pl-button type="info" is-old @click="alert('old-info')">info</pl-button>
-        <pl-button type="warning" is-old @click="alert('old-warning')">warning</pl-button>
-        <pl-button type="danger" is-old @click="alert('old-danger')">danger</pl-button>
-        <pl-button disabled is-old @click="alert('old-disabled')">disabled</pl-button>
-    </p>
-    <h2>
-        small：
-    </h2>
-    <p>
-        <pl-button type="primary" is-old size="small" @click="alert('old-primary')">primary</pl-button>
-        <pl-button type="secondary" is-old size="small" @click="alert('old-secondary')">secondary</pl-button>
-        <pl-button type="success" is-old size="small" @click="alert('old-success')">success</pl-button>
-        <pl-button type="info" is-old size="small" @click="alert('old-info')">info</pl-button>
-        <pl-button type="warning" is-old size="small" @click="alert('old-warning')">warning</pl-button>
-        <pl-button type="danger" is-old size="small" @click="alert('old-danger')">danger</pl-button>
-        <pl-button disabled is-old size="small" @click="alert('old-disabled')">disabled</pl-button>
     </p>
 </div>
 

@@ -34,7 +34,6 @@ export default {
 <template>
 
 <div>
-    <h1>DSP内部使用风格</h1>
     <div>
         <p>{{value}}</p>
         <pl-select v-model="value" :options="options"></pl-select>
@@ -43,16 +42,6 @@ export default {
     <div>
         <p>{{value}}</p>
         <pl-select width="200px" height="30px" v-model="value" :options="options"></pl-select>
-    </div>
-    <h1>admin/adpos内部使用风格</h1>
-    <div>
-        <p>{{value}}</p>
-        <pl-select is-old v-model="value" :options="options"></pl-select>
-    </div>
-    <h2>指定宽高：</h2>
-    <div>
-        <p>{{value}}</p>
-        <pl-select is-old width="200px" height="30px" v-model="value" :options="options"></pl-select>
     </div>
 </div>
 

@@ -21,7 +21,6 @@ export default {
 <template>
 
 <div>
-    <h1>DSP内部使用风格</h1>
     <div>
         <pl-price-input v-model="text" placeholder="请输入价格"></pl-price-input>
         <p>{{text}}</p>
@@ -29,16 +28,6 @@ export default {
     <h2>通过style来控制大小：</h2>
     <div>
         <pl-price-input v-model="text" placeholder="请输入价格" style="width: 200px; height: 50px;"></pl-price-input>
-        <p>{{text}}</p>
-    </div>
-    <h1>admin/adpos内部使用风格</h1>
-    <div>
-        <pl-price-input is-old v-model="text" placeholder="请输入价格"></pl-price-input>
-        <p>{{text}}</p>
-    </div>
-    <h2>通过style来控制大小：</h2>
-    <div>
-        <pl-price-input is-old v-model="text" placeholder="请输入价格" style="width: 200px; height: 50px;"></pl-price-input>
         <p>{{text}}</p>
     </div>
 </div>

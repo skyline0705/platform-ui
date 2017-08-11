@@ -21,7 +21,6 @@ export default {
 <template>
 
 <div>
-    <h1>DSP内部使用风格</h1>
     <div>
         <pl-date-picker
             v-model="date"
@@ -34,10 +33,6 @@ export default {
                 end: new Date('2019', '0', '1')
             }"
         ></pl-date-picker>
-    </div>
-    <h1>admin/adpos内部使用风格</h1>
-    <div>
-        <pl-date-picker is-old v-model="date"></pl-date-picker>
     </div>
 </div>
 

@@ -2,7 +2,6 @@
 
 | 属性          | 描述                    | 可选值            | 默认值     |
 | ----------- | --------------------- | -------------- | ------- |
-| is-old      | 是否为老UI（adpos/admin）风格 | `true` `false` | `false` |
 | value       | 当前value值              |                | 无       |
 | readonly    | native属性，是否只读         |                |         |
 | disabled    | native属性，是否禁用         |                |         |

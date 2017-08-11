@@ -27,29 +27,9 @@ export default {
 <template>
 
 <div>
-    <h1>DSP内部使用风格</h1>
     <pl-tabs @tab-change="alert">
         <pl-tab-panel>
             <template slot="tab">我是1</template>
-            啦啦啦啦1
-        </pl-tab-panel>
-        <pl-tab-panel disabled>
-            <template slot="tab">我是2</template>
-            啦啦啦啦2
-        </pl-tab-panel>
-        <pl-tab-panel>
-            <template slot="tab">我是3</template>
-            啦啦啦啦3
-        </pl-tab-panel>
-        <pl-tab-panel>
-            <template slot="tab">我是4</template>
-            啦啦啦啦4
-        </pl-tab-panel>
-    </pl-tabs>
-    <h1>admin/adpos内部使用风格</h1>
-    <pl-tabs @tab-change="alert" is-old>
-        <pl-tab-panel>
-            <template slot="tab" active>我是1</template>
             啦啦啦啦1
         </pl-tab-panel>
         <pl-tab-panel disabled>

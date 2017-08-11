@@ -87,30 +87,6 @@ export default {
             </template>
         </pl-table-column>
     </pl-table>
-    <hr>
-    <pl-table
-        is-old
-        :data="data"
-        @row-click="alert"
-        :height="300"
-    >
-        <pl-table-column
-            v-for="column in columns"
-            :fixed="column.fixed"
-            resizable
-            :id="column.id"
-            :width="column.width"
-            :key="column.id"
-        >
-            <template slot="column" scope="scope">
-                {{scope.$index}}
-                {{column.text}}
-            </template>
-            <template slot="cell" scope="scope">
-                {{scope.row[column.id]}}
-            </template>
-        </pl-table-column>
-    </pl-table>
 </div>
 
 </template>
