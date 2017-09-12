@@ -18,7 +18,7 @@ export default {
     },
     data() {
         return {
-            isShow: false,
+            title: '提示',
             msg: ''
         };
     },
@@ -33,9 +33,9 @@ export default {
             this.nowConfirm = null;
             this.$refs.modal.hide();
         },
-        show(msg) {
+        show({title = this.title, msg = this.msg} = {}) {
+            this.title = title;
             this.msg = msg;
-            // TODO不知道回不回有内存泄露…
             return new Promise((resolve, reject) => {
                 this.nowConfirm = {resolve, reject};
                 this.$refs.modal.show();
@@ -69,14 +69,14 @@ export default {
         @after-hide="trigger('after-hide')"
     >
         <template slot="title">
-            <slot name="title">提示</slot>
+            <slot name="title">{{title}}</slot>
         </template>
         <div class="modal-confirm">
             <slot>{{msg}}</slot>
         </div>
         <div class="modal-confirm-action">
-            <pl-button type="primary" @click="confirm">确定</pl-button>
             <pl-button @click="cancel">取消</pl-button>
+            <pl-button type="primary" @click="confirm">确定</pl-button>
         </div>
     </pl-modal>
 </div>

@@ -18,6 +18,7 @@ export default {
     },
     data() {
         return {
+            title: '提示',
             msg: ''
         };
     },
@@ -28,10 +29,9 @@ export default {
         hide() {
             this.$refs.modal.hide();
         },
-        show(msg) {
-            if (msg) {
-                this.msg = msg;
-            }
+        show({title = this.title, msg = this.msg} = {}) {
+            this.title = title;
+            this.msg = msg;
             this.$refs.modal.show();
         },
         trigger(eventName) {
@@ -56,7 +56,7 @@ export default {
         @after-hide="trigger('after-hide')"
     >
         <template slot="title">
-            <slot name="title">提示</slot>
+            <slot name="title">{{title}}</slot>
         </template>
         <div class="modal-alert">
             <slot>{{msg}}</slot>
