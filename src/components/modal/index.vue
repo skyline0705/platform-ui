@@ -44,18 +44,13 @@ export default {
         }
     },
     mounted() {
-        this.nextSibling = this.$el.nextSibling;
+        // TODO 后续再看下vue内部对于dom回收的部分，这块算是有点坑
         this.parentElement = this.$el.parentElement;
         // 局部写modal，但是怕受到translate/rotate的影响
         document.body.appendChild(this.$el);
     },
     beforeDestroy() {
-        if (this.nextSibling) {
-            this.parentElement.insertBefore(this.$el, this.nextSibling);
-        } else {
-            this.parentElement.appendChild(this.$el);
-        }
-        this.nextSibling = null;
+        this.parentElement.appendChild(this.$el);
         this.parentElement = null;
     }
 };
