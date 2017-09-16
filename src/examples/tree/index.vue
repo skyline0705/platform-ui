@@ -82,7 +82,3 @@ export default {
 </div>
 
 </template>
-<style lang="stylus">
-div
-    font-size 12px
-</style>

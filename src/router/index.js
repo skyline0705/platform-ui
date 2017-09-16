@@ -27,12 +27,6 @@ export default new Router({
         path: '/radio',
         component: () => import('@/examples/radio')
     }, {
-        path: '/number-input',
-        component: () => import('@/examples/number-input')
-    }, {
-        path: '/price-input',
-        component: () => import('@/examples/price-input')
-    }, {
         path: '/select',
         component: () => import('@/examples/select')
     }, {

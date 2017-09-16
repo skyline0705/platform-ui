@@ -22,12 +22,12 @@ export default {
 
 <div>
     <div>
-        <pl-input v-model="text" placeholder="123"></pl-input>
+        <pl-input v-model.lazy="text" placeholder="123"></pl-input>
         <p>{{text}}</p>
     </div>
     <h2>通过style来控制大小：</h2>
     <div>
-        <pl-input v-model="text" placeholder="123" style="width: 200px; height: 50px;"></pl-input>
+        <pl-input v-model.lazy="text" placeholder="123" style="width: 200px; height: 50px;"></pl-input>
         <p>{{text}}</p>
     </div>
 </div>

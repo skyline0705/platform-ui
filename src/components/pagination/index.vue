@@ -6,7 +6,7 @@
  * Jun 21, 2016
  */
 
-import plNumberInput from '../number-input';
+import plInput from '../input';
 
 export default {
     name: 'plPagination',
@@ -103,7 +103,7 @@ export default {
         }
     },
     components: {
-        plNumberInput
+        plInput
     }
 };
 </script>
@@ -237,12 +237,12 @@ export default {
         </ul>
         <span v-if="layout.jumper" class="jumper">
             前往
-            <pl-number-input
+            <pl-input
                 v-model="goPage"
                 style="width: 35px;height: 28px;text-align: center;"
                 @keyup.native.enter="quickJumpTo"
             >
-            </pl-number-input>
+            </pl-input>
             页
         </span>
     </div>

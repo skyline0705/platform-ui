@@ -6,8 +6,6 @@
  */
 import button from '@/components/button';
 import input from '@/components/input';
-import numberInput from '@/components/number-input';
-import priceInput from '@/components/price-input';
 import radio from '@/components/radio';
 import checkbox from '@/components/checkbox';
 import textarea from '@/components/textarea';
@@ -35,8 +33,6 @@ import loading from '@/components/loading';
 function install(Vue) {
     Vue.component(button.name, button);
     Vue.component(input.name, input);
-    Vue.component(numberInput.name, numberInput);
-    Vue.component(priceInput.name, priceInput);
     Vue.component(radio.name, radio);
     Vue.component(checkbox.name, checkbox);
     Vue.component(textarea.name, textarea);
@@ -66,8 +62,6 @@ export default {
     version: '0.1.3',
     button,
     input,
-    numberInput,
-    priceInput,
     radio,
     checkbox,
     textarea,

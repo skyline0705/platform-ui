@@ -12,14 +12,23 @@ export default {
             required: true
         }
     },
-    computed: {
-        computedValue: {
-            get() {
-                return this.value;
-            },
-            set(val) {
-                this.$emit('input', val);
-            }
+    data() {
+        return {
+            currentValue: this.value
+        };
+    },
+    methods: {
+        setCurrentValue(val) {
+            this.currentValue = val;
+        },
+        eventHandler(type, val) {
+            this.setCurrentValue(val);
+            this.$emit(type, val);
+        }
+    },
+    watch: {
+        value(val) {
+            this.setCurrentValue(val);
         }
     }
 };
@@ -29,7 +38,9 @@ export default {
 
 <input
     type="text"
-    v-model="computedValue"
+    :value="currentValue"
+    @input="eventHandler('input', $event.target.value)"
+    @change="eventHandler('change', $event.target.value)"
 >
 
 </template>

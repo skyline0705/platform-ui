@@ -18,12 +18,6 @@ export default {
             <router-link to="/input">输入框</router-link>
         </li>
         <li>
-            <router-link to="/number-input">数字输入框</router-link>
-        </li>
-        <li>
-            <router-link to="/price-input">价格输入框</router-link>
-        </li>
-        <li>
             <router-link to="/radio">单选框</router-link>
         </li>
         <li>

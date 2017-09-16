@@ -33,6 +33,7 @@ export default {
         <pl-button type="info" size="large" @click="alert('info')">info</pl-button>
         <pl-button type="warning" size="large" @click="alert('warning')">warning</pl-button>
         <pl-button type="danger" size="large" @click="alert('danger')">danger</pl-button>
+        <pl-button size="large" @click="alert('default')">default</pl-button>
         <pl-button disabled size="large">disabled</pl-button>
     </p>
     <h2>
@@ -45,6 +46,7 @@ export default {
         <pl-button type="info" @click="alert('info')">info</pl-button>
         <pl-button type="warning" @click="alert('warning')">warning</pl-button>
         <pl-button type="danger" @click="alert('danger')">danger</pl-button>
+        <pl-button @click="alert('default')">default</pl-button>
         <pl-button disabled>disabled</pl-button>
     </p>
     <h2>
@@ -57,6 +59,7 @@ export default {
         <pl-button type="info" size="small" @click="alert('info')">info</pl-button>
         <pl-button type="warning" size="small" @click="alert('warning')">warning</pl-button>
         <pl-button type="danger" size="small" @click="alert('danger')">danger</pl-button>
+        <pl-button size="small" @click="alert('default')">default</pl-button>
         <pl-button disabled size="small">disabled</pl-button>
     </p>
 </div>
